@@ -6,7 +6,7 @@ with the threads that are trending at the moment at the requested subreddits.
 
 To configure it: 
 
-1- Inside the `reddit-scrapper/src/main/resources` folder edit the file `application-telegram.properties` with following properties:  
+1- Inside the `reddit-scrapper/src/main/resources` folder edit the file `application.properties` with following properties:  
 ```text
 telegram.bot.username=your_bot_name
 telegram.bot.token=your_bot_token
