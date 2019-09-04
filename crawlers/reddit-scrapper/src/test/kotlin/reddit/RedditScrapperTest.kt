@@ -45,13 +45,13 @@ class RedditScrapperTest: FreeSpec() {
 
     private fun mockReddit() {
         mockkObject(Reddit)
-        every { Reddit.urlBase } returns "http://localhost:8080"
-        every { Reddit.subredditPath } returns "/subreddit/"
+        every { Reddit.urlBase } returns "https://old.reddit.com"
+        every { Reddit.subredditPath } returns "/r/"
     }
 
     private fun mockRedditResponse() {
         wireMockServer.start()
-        stubFor(get(urlMatching("/subreddit/leagueoflegends"))
+        stubFor(get(urlMatching("/r/leagueoflegends"))
                 .willReturn(aResponse()
                         .withStatus(200)
                         .withHeader("Content-Type", "text/html")
